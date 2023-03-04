@@ -13,7 +13,20 @@ function App() {
    return (
       <>
          <AnimationModal {...state} onHide={() => setState({ ...state, visible: false })}>
-            <label className='p-0'>Modal Contents</label>
+            <div className='modal_content'>
+               <div className='_div'>
+                  <label>Animation</label>
+                  <p>{state?.animation}</p>
+               </div>
+               <div className='_div'>
+                  <label>Size</label>
+                  <p>{state?.size}</p>
+               </div>
+               <div className='_div'>
+                  <label>Close on Overlay</label>
+                  <p>{state?.closeOnOverlayClick + ''}</p>
+               </div>
+            </div>
          </AnimationModal>
          <div className="App">
             <div className='wrapper'>
